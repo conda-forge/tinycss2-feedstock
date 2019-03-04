@@ -1,8 +1,8 @@
 {% set name = "tinycss2" %}
-{% set version = "0.6.1" %}
+{% set version = "1.0.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "7c53c2c0e914c7711c295b3101bcc78e0b7eda23ff20228a936efe11cdcc7136" %}
+{% set hash_value = "562d2e2b7ff191c0a9587ad5114dbf47d015d02f7449aa0ac41e7a725fbd77fc" %}
 
 package:
   name: '{{ name|lower }}'
