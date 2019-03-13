@@ -20,12 +20,12 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools
     - webencodings >=0.4
   run:
-    - python
+    - python >=3.6
     - webencodings >=0.4
 
 test:
