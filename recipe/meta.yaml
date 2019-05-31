@@ -15,17 +15,17 @@ source:
 
 build:
   number: 0
+  skip: True  # [py<35]
   script: python -m pip install --no-deps --ignore-installed .
-  noarch: python
 
 requirements:
   host:
-    - python
+    - python>3.5
     - pip
     - setuptools
     - webencodings >=0.4
   run:
-    - python
+    - python>3.5
     - webencodings >=0.4
 
 test:
@@ -47,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - johanneskoester
+    - mrandrewandrade
