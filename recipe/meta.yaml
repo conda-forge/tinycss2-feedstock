@@ -1,8 +1,8 @@
 {% set name = "tinycss2" %}
-{% set version = "0.6.1" %}
+{% set version = "1.0.2" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "7c53c2c0e914c7711c295b3101bcc78e0b7eda23ff20228a936efe11cdcc7136" %}
+{% set hash_value = "6427d0e3faa0a5e0e8c9f6437e2de26148a7a197a8b0992789f23d9a802788cf" %}
 
 package:
   name: '{{ name|lower }}'
@@ -14,18 +14,18 @@ source:
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
-  number: 0
+  number: 1
+  skip: True  # [py<35]
   script: python -m pip install --no-deps --ignore-installed .
-  noarch: python
 
 requirements:
   host:
-    - python
+    - python>3.5
     - pip
     - setuptools
     - webencodings >=0.4
   run:
-    - python
+    - python>3.5
     - webencodings >=0.4
 
 test:
@@ -47,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - johanneskoester
+    - mrandrewandrade
