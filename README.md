@@ -3,7 +3,7 @@ About tinycss2
 
 Home: https://github.com/Kozea/tinycss2
 
-Package license: BSD
+Package license: BSD=3-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -18,9 +18,12 @@ Current build status
 
 
 <table><tr>
+    
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5236&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tinycss2-feedstock?branchName=master">
+      </a>
     </td>
   </tr>
 </table>
@@ -118,4 +121,5 @@ Feedstock Maintainers
 =====================
 
 * [@johanneskoester](https://github.com/johanneskoester/)
+* [@mrandrewandrade](https://github.com/mrandrewandrade/)
 
