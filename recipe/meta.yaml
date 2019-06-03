@@ -1,31 +1,25 @@
-{% set name = "tinycss2" %}
 {% set version = "1.0.2" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "6427d0e3faa0a5e0e8c9f6437e2de26148a7a197a8b0992789f23d9a802788cf" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: tinycss2
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://pypi.io/packages/source/t/tinycss2/tinycss2-{{ version }}.tar.gz
+  sha256: 6427d0e3faa0a5e0e8c9f6437e2de26148a7a197a8b0992789f23d9a802788cf
 
 build:
   number: 1
-  skip: True  # [py<35]
-  script: python -m pip install --no-deps --ignore-installed .
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python>3.5
+    - python >3.5
     - pip
-    - setuptools
-    - webencodings >=0.4
+    - pytest-runner
   run:
-    - python>3.5
+    - python >3.5
     - webencodings >=0.4
 
 test:
@@ -34,7 +28,7 @@ test:
 
 about:
   home: https://github.com/Kozea/tinycss2
-  license: BSD
+  license: BSD=3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Low-level CSS parser for Python
