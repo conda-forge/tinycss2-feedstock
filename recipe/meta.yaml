@@ -9,17 +9,17 @@ source:
   sha256: 6427d0e3faa0a5e0e8c9f6437e2de26148a7a197a8b0992789f23d9a802788cf
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python >3.5
+    - python >=3.5
     - pip
     - pytest-runner
   run:
-    - python >3.5
+    - python >=3.5
     - webencodings >=0.4
 
 test:
@@ -42,3 +42,4 @@ extra:
   recipe-maintainers:
     - johanneskoester
     - mrandrewandrade
+    - thewchan
