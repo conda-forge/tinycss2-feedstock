@@ -15,6 +15,7 @@ build:
 
 requirements:
   host:
+    - flit
     - python >=3.5
     - pip
     - pytest-runner
