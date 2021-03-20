@@ -19,6 +19,7 @@ requirements:
     - python >=3.5
     - pip
     - pytest-runner
+    - webencodings >=0.4
   run:
     - python >=3.5
     - webencodings >=0.4
