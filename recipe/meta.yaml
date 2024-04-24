@@ -1,4 +1,4 @@
-{% set version = "1.2.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: tinycss2
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tinycss2/tinycss2-{{ version }}.tar.gz
-  sha256: 8cff3a8f066c2ec677c06dbc7b45619804a6938478d9d73c284b29d14ecb0627
+  sha256: 152f9acabd296a8375fbca5b84c961ff95971fcfc32e79550c8df8e29118c54d
 
 build:
   number: 0
