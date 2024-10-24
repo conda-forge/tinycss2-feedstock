@@ -15,14 +15,12 @@ build:
 
 requirements:
   host:
-    - flit
-    - python >=3.5
+    - flit_core >=3.2,<4
+    - python >=3.8
     - pip
-    - pytest-runner
-    - webencodings >=0.4
   run:
     - python >=3.5
-    - webencodings >=0.4
+    - webencodings >=0.8
 
 test:
   imports:
