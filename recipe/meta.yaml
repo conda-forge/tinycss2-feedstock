@@ -20,11 +20,15 @@ requirements:
     - pip
   run:
     - python >=3.5
-    - webencodings >=0.8
+    - webencodings >=0.4
 
 test:
   imports:
     - tinycss2
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/Kozea/tinycss2
