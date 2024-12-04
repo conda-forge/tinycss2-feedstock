@@ -5,21 +5,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/t/tinycss2/tinycss2-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/t/tinycss2/tinycss2-{{ version }}.tar.gz
   sha256: 10c0972f6fc0fbee87c3edb76549357415e94548c1ae10ebccdea16fb404a9b7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - flit-core >=3.2,<4
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - webencodings >=0.4
 
 test:
@@ -29,6 +29,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Kozea/tinycss2
