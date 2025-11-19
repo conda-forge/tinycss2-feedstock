@@ -11,11 +11,10 @@ Summary: Low-level CSS parser for Python
 
 Development: https://github.com/Kozea/tinycss2
 
-Documentation: http://tinycss2.readthedocs.io
+Documentation: http://tinycss2.readthedocs.io/
 
 tinycss2 is a rewrite of tinycss with a simpler API, based on the more recent
 CSS Syntax Level 3 Specification.
-
 
 Current build status
 ====================
